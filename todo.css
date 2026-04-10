@@ -1,81 +1,96 @@
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'poppins',sans-serif;
+    box-sizing:border-box;
 }
-
-body {
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    width: 400px;
-}
-
-.todo-app {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.todo-app h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.row {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.row input {
-    flex: 1;
+.container{
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,darkviolet,blue);
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+}
+.todo-app{
+    width:100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius:10px;
+}
+.todo-app h2{
+    color: orange;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background-color:grey;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex:1;
+    border:none;
     outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
 }
-
-.row button {
-    padding: 10px 15px;
-    border: none;
-    background: #0072ff;
-    color: white;
-    border-radius: 5px;
+button{
+    border:none;
+    outline: none;
+    padding:16px 50px;
+    background:#ff5945;
+    color:#fff;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 40px;
 }
-
-.row button:hover {
-    background: #005cd1;
-}
-
-ul li {
+ul li{
     list-style: none;
-    padding: 12px;
-    margin-bottom: 10px;
-    background: #f0f8ff;
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select:none;
+    cursor:pointer;
+    position:relative;
 }
-
-ul li.checked {
-    text-decoration: line-through;
-    color: gray;
-    background: #d3e3fc;
-}
-ul li span {
+ul li::before{
+    content: '';
     position: absolute;
-    right: 10px;
-    top: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    color: red;
+    height:28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-image:url(https://www.svgrepo.com/show/325870/circle-small.svg);
+    background-position: center;
+    top:12px;
+    left:8px;
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image:url("https://cdn-icons-png.flaticon.com/128/190/190411.png");
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#555;
+    text-align: center;
+    line-height: 40px;
+    top: 5px;   
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color:#edeef0;
+    color:grey;
 }
