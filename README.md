@@ -25,4 +25,4 @@ Built using JavaScript to practice **DOM manipulation and dynamic UI updates**.
 ## 🔹 Live Demo
 Live at:
 ---
-git clone https://github.com/Jyothsna-Priya9676/basic-to-do-project.git
+git clone https://jyothsna-priya9676.github.io/todo-project/
